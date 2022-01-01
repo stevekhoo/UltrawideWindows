@@ -86,7 +86,8 @@ My suggestion is to use the following configuration:
 | <kbd>Alt</kbd> + <kbd>Meta</kbd> + <kbd>Numpad0</kbd>  | <kbd>UltrawideWindows: Maximize Window (copy4)</kbd> |
 | <kbd>Alt</kbd> + <kbd>Numpad5</kbd>                    | <kbd>UltrawideWindows: Center Window</kbd>           |
 | <kbd>Ctrl</kbd> + <kbd>Numpad5</kbd>                   | <kbd>UltrawideWindows: Center Window (copy)</kbd>    |
-
+| <kbd>ctrl</kbd> + <kbd>Meta</kbd> + <kbd>Left</kbd>    | <kbd>UltrawideWindows: Move Window left</kbd>        |
+| <kbd>ctrl</kbd> + <kbd>Meta</kbd> + <kbd>Right</kbd>   | <kbd>UltrawideWindows: Move Window right</kbd>       |
 
 
 

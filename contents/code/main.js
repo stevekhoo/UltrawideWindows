@@ -49,6 +49,21 @@ function center(workspace) {
     }
 }
 
+function moveLeft(workspace) {
+    var client = workspace.activeClient;
+    if (client.moveable) {
+        var maxArea = workspace.clientArea(KWin.MaximizeArea, client);
+        reposition(client, Math.max(maxArea.x, (client.x - client.width)), client.y, client.width, client.height)
+    }
+}
+
+function moveRight(workspace) {
+    var client = workspace.activeClient;
+    if (client.moveable) {
+        var maxArea = workspace.clientArea(KWin.MaximizeArea, client);
+        reposition(client, Math.min((maxArea.x + maxArea.width - client.width), (client.x + client.width)), client.y, client.width, client.height)
+    }
+}
 
 // function isInPosition(workspace, numberXslots, numberYslots, x, y, xSlotToFill, ySlotToFill) {
 //     var client = workspace.activeClient;
@@ -271,4 +286,12 @@ registerShortcut("MoveWindowToCenter", "UltrawideWindows: Center Window", "ctrl+
 
 registerShortcut("MoveWindowToCenter1", "UltrawideWindows: Center Window (copy)", "alt+Num+5", function () {
     center(workspace)
+});
+
+registerShortcut("MoveWindowLeft", "UltrawideWindows: Move Window Left", "Ctrl+Meta+Left", function () {
+    moveLeft(workspace)
+});
+
+registerShortcut("MoveWindowRight", "UltrawideWindows: Move Window Right", "Ctrl+Meta+Right", function () {
+    moveRight(workspace)
 });
